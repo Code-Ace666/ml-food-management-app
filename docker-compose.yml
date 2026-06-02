@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: zero_waste_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./food_waste.db:/app/food_waste.db
+      - ./backend/models_store:/app/backend/models_store
+      - ./backend/app/data:/app/backend/app/data
+    environment:
+      - APP_ENV=production
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - DATABASE_URL=sqlite:////app/food_waste.db
+    restart: always
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: zero_waste_frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://backend:8000
+    depends_on:
+      - backend
+    restart: always

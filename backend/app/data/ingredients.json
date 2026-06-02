@@ -1,0 +1,32 @@
+{
+  "rice": {
+    "name": "Rice",
+    "portion_size": 100.0,
+    "unit": "g"
+  },
+  "vegetables": {
+    "name": "Vegetables",
+    "portion_size": 150.0,
+    "unit": "g"
+  },
+  "oil": {
+    "name": "Cooking Oil",
+    "portion_size": 15.0,
+    "unit": "ml"
+  },
+  "flour": {
+    "name": "Flour (Atta)",
+    "portion_size": 80.0,
+    "unit": "g"
+  },
+  "milk": {
+    "name": "Milk",
+    "portion_size": 50.0,
+    "unit": "ml"
+  },
+  "pulses": {
+    "name": "Pulses & Lentils",
+    "portion_size": 40.0,
+    "unit": "g"
+  }
+}

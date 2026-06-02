@@ -1,0 +1,4 @@
+venv/
+.env
+food_waste.db
+__pycache__/
